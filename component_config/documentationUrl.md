@@ -1,0 +1,1 @@
+https://github.com/keboola/component-webdav-writer/blob/master/README.md

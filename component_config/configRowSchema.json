@@ -1,0 +1,62 @@
+{
+  "type": "object",
+  "title": "WebDAV Sync Options",
+  "required": ["sync_options"],
+  "properties": {
+    "sync_options": {
+      "type": "object",
+      "title": "Synchronization Options",
+      "propertyOrder": 1,
+      "required": [
+        "remote_path",
+        "append_datetime"
+      ],
+      "options": {
+        "section": "Sync Options",
+        "collapsed": false
+      },
+      "properties": {
+        "remote_path": {
+          "type": "string",
+          "title": "Remote Path",
+          "description": "Remote folder where files will be uploaded. E.g. /reports/ or /.",
+          "default": "/",
+          "propertyOrder": 1
+        },
+        "append_datetime": {
+          "type": "boolean",
+          "title": "Append Datetime Suffix",
+          "description": "If enabled, adds a timestamp suffix to each file name on upload.",
+          "default": false,
+          "propertyOrder": 2
+        },
+        "datetime_format": {
+          "type": "string",
+          "title": "Datetime Suffix Format",
+          "description": "Choose how to format timestamps added to filenames.",
+          "enum": [
+            "%Y-%m-%d",
+            "%Y-%m-%d_%H-%M-%S",
+            "%Y%m%d",
+            "%Y%m%d_%H%M%S",
+            "{epoch}"
+          ],
+          "enumNames": [
+            "YYYY-MM-DD",
+            "YYYY-MM-DD_HH-mm-ss",
+            "YYYYMMDD",
+            "YYYYMMDD_HHMMSS",
+            "Timestamp (Epoch)"
+          ],
+          "default": "%Y-%m-%d",
+          "propertyOrder": 3,
+          "options": {
+            "dependencies": {
+              "append_datetime": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+Uploads tables and files from Keboola Storage to a WebDAV server, supporting custom remote paths, optional timestamp suffixes, and flexible datetime formats.

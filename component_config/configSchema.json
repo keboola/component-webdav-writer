@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "title": "WebDAV Writer Configuration",
+  "required": ["authorization"],
+  "properties": {
+    "authorization": {
+      "type": "object",
+      "title": "Authorization",
+      "propertyOrder": 1,
+      "required": ["webdav_hostname", "username", "#password"],
+      "options": {
+        "section": "Authorization",
+        "collapsed": false
+      },
+      "properties": {
+        "webdav_hostname": {
+          "type": "string",
+          "title": "WebDAV Server URL",
+          "description": "Example: https://myserver.com",
+          "format": "uri",
+          "propertyOrder": 1
+        },
+        "username": {
+          "type": "string",
+          "title": "Username",
+          "propertyOrder": 2
+        },
+        "#password": {
+          "type": "string",
+          "title": "Password",
+          "format": "password",
+          "propertyOrder": 3
+        }
+      }
+    }
+  }
+}
