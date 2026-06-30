@@ -6,24 +6,30 @@ certifi==2025.7.9
     # via requests
 charset-normalizer==3.4.2
     # via requests
+colorama==0.4.6
+    # via pytest
 dateparser==1.2.1
     # via
     #   keboola-wr-writer (pyproject.toml)
     #   keboola-utils
 deprecated==1.2.18
     # via keboola-component
-freezegun==1.5.1
-    # via keboola-wr-writer (pyproject.toml)
+freezegun==1.5.5
+    # via
+    #   keboola-wr-writer (pyproject.toml)
+    #   keboola-vcr
 idna==3.10
     # via requests
 iniconfig==2.1.0
     # via pytest
-keboola-component==1.6.10
+keboola-component==1.11.0
     # via keboola-wr-writer (pyproject.toml)
 keboola-http-client==1.0.1
     # via keboola-wr-writer (pyproject.toml)
 keboola-utils==1.1.0
     # via keboola-wr-writer (pyproject.toml)
+keboola-vcr==0.5.0
+    # via keboola-component
 lxml==6.0.0
     # via webdavclient3
 mock==5.2.0
@@ -51,8 +57,9 @@ pytz==2025.2
     # via
     #   keboola-wr-writer (pyproject.toml)
     #   dateparser
-    #   keboola-component
     #   keboola-utils
+pyyaml==6.0.3
+    # via vcrpy
 regex==2024.11.6
     # via dateparser
 requests==2.32.4
@@ -70,11 +77,17 @@ typing-extensions==4.14.1
     #   typing-inspection
 typing-inspection==0.4.1
     # via pydantic
+tzdata==2026.2
+    # via tzlocal
 tzlocal==5.3.1
     # via dateparser
 urllib3==2.5.0
     # via requests
+vcrpy==8.2.1
+    # via keboola-vcr
 webdavclient3==3.14.6
     # via keboola-wr-writer (pyproject.toml)
 wrapt==1.17.2
-    # via deprecated
+    # via
+    #   deprecated
+    #   vcrpy
